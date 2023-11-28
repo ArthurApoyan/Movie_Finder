@@ -1,0 +1,6 @@
+.topRatedMoviesPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}

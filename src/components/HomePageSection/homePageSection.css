@@ -1,0 +1,51 @@
+.homePageSection{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 500px;
+    margin-bottom: 5%;
+    padding: 0 2% 10% 2%;
+    border: 3px solid rgb(12, 77, 79);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px;
+    background: rgb(28,51,52);
+    background: linear-gradient(90deg, rgba(28,51,52,1) 30%, rgba(17,100,102,1) 80%);
+}
+.homePageSectionTitle, .homePageSectionContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.homePageSectionTitle{
+    margin-bottom: 2%;
+}
+.homePageSectionTitle > h2{
+    font-size: 28px;
+    padding-left: 20px;
+    margin: 0;
+    color: white;
+}
+.homePageSectionTitleLink{
+    text-decoration: none;
+    width: 10%;
+    color: white;
+}
+.homePageSectionTitleLink:hover{
+    color: #042323;
+}
+.homePageSectionContent > button{
+    background-color: transparent;
+    color: white;
+    font-size: 80px;
+    border: none;
+    text-shadow: 4px 1px #121111;
+}
+.homePageSectionContent > button:hover{
+    cursor: pointer;
+    color: #042323;
+}
+.homePageSectionContent > button:disabled{
+    cursor: not-allowed;
+    color: #807e7e;
+}
