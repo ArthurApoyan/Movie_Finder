@@ -9,3 +9,8 @@
     background: linear-gradient(90deg, rgba(37,78,88,1) 40%, rgba(17,45,50,1) 80%);
     box-shadow: 0 3px 20px 4px;
 }
+.menuButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

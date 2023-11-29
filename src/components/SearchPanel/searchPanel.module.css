@@ -25,3 +25,9 @@
     cursor: pointer;
     box-shadow: 0 0 10px 5px;
 }
+
+@media screen and (max-width: 960px){
+    .searchPanel{
+        width: 40%;
+    }
+}

@@ -7,8 +7,7 @@ import {
     selectSearchInputValue
 } from "../../store/slices/searchInputValue/searchInputValueSlice";
 
-import "./searchPanel.css";
-
+import styles from "./searchPanel.module.css";
 
 const SearchPanel = () => {
 
@@ -29,7 +28,7 @@ const SearchPanel = () => {
     };
 
     return (
-        <div className="searchPanel">
+        <div className={styles.searchPanel}>
             <input type="text"
                    placeholder="Movie Name"
                    value={inputValue}
