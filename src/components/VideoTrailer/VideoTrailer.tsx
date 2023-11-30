@@ -21,9 +21,9 @@ const VideoTrailer = () => {
     console.log(videos)
 
     return (
-        videos && <div className="playerContainer">
+        <div className="playerContainer">
             <div className="playerDiv">
-                <YouTube iframeClassName="player" videoId={videos[0].id.videoId}/>
+                <YouTube iframeClassName="player" videoId={videos && videos[0].id.videoId}/>
             </div>
         </div>
     );
