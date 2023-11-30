@@ -1,5 +1,5 @@
 .mobileMenu{
-    width: 20%;
+    width: 25%;
     position: absolute;
     top: 100%;
     right: 0;
@@ -34,4 +34,16 @@
 }
 .mobileMenuLink:hover{
     color: #db740e;
+}
+
+@media screen and (max-width: 650px){
+    .mobileMenu{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .mobileMenu{
+        width: 45%;
+    }
 }

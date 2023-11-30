@@ -8,10 +8,66 @@
 .playerDiv{
     width: 1000px;
     height: 600px;
-    border: 5px solid #02024b;
+    border: 3px solid rgb(12, 77, 79);
     box-shadow: 0 0 20px 10px;
 }
 .player{
     width: 1000px;
     height: 600px;
+}
+
+@media screen and (max-width: 1200px){
+    .playerContainer{
+        padding-top: 12%;
+    }
+    .playerDiv{
+        width: 800px;
+        height: 500px;
+    }
+    .player{
+        width: 800px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .playerContainer{
+        padding-top: 15%;
+    }
+    .playerDiv{
+        width: 600px;
+        height: 400px;
+    }
+    .player{
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .playerContainer{
+        padding-top: 18%;
+    }
+    .playerDiv{
+        width: 450px;
+        height: 300px;
+    }
+    .player{
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .playerContainer{
+        padding-top: 22%;
+    }
+    .playerDiv{
+        width: 300px;
+        height: 180px;
+    }
+    .player{
+        width: 300px;
+        height: 180px;
+    }
 }

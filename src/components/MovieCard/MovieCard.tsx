@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {POSTER_URL} from "../../api/url/urls";
 
-import "./movieCard.css";
+import styles from "./movieCard.module.css";
 
 interface PropTypes {
     id: number;
@@ -14,15 +14,15 @@ interface PropTypes {
 const MovieCard = ({id, posterPath, title, className}:PropTypes) => {
     return (
         <div className={className} key={id}>
-            <Link className="movieCardLink" to={`${id}`}>
+            <Link className={styles.movieCardLink} to={`${id}`}>
                 <img
-                    className="movieCardPoster"
+                    className={styles.movieCardPoster}
                     src={POSTER_URL + posterPath}
                     alt="poster"
                     loading="lazy"
                 />
             </Link>
-            <Link className="movieCardLink" to={`${id}`}><h3>{title}</h3></Link>
+            <Link className={styles.movieCardLink} to={`${id}`}><h3>{title}</h3></Link>
         </div>
     );
 };

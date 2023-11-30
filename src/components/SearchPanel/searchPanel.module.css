@@ -5,10 +5,11 @@
     gap: 5px;
 }
 .searchPanel > input{
-    border-radius: 10px;
+    border: none;
+    border-radius: 20px;
     padding: 2% 5%;
     width: 90%;
-    font-size: 16px;
+    font-size: 0.9em;
 }
 .searchPanel > input:focus{
     outline: none;

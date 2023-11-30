@@ -7,7 +7,8 @@ import MoviesOnPage from "../../components/MoviesOnPage/MoviesOnPage";
 import Paginator from "../../components/Paginator/Paginator";
 import Loading from "../../components/Loading/Loading";
 
-import "./topRatedMovies.css";
+import styles from "./topRatedMovies.module.css";
+import allMoviesStyles from "../../components/MoviesOnPage/moviesOnPage.module.css";
 
 const TopRatedMovies = () => {
 
@@ -21,10 +22,10 @@ const TopRatedMovies = () => {
     }, [page])
 
     return (
-        <div className="topRatedMoviesPage">
+        <div className={styles.topRatedMoviesPage}>
             {isLoading && <Loading/>}
 
-            <MoviesOnPage className="allMoviesOnOtherPages" allMovies={topRated}/>
+            <MoviesOnPage className={allMoviesStyles.allMoviesOnOtherPages} allMovies={topRated}/>
 
             <Paginator count={10} setPage={setPage}/>
         </div>

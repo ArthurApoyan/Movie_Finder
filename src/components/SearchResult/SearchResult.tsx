@@ -8,7 +8,7 @@ import {POSTER_URL, SEARCH_URL} from "../../api/url/urls";
 import {Results} from "../../types/types";
 import Paginator from "../Paginator/Paginator";
 
-import "./searchResult.css"
+import styles from "./searchResult.module.css"
 
 const SearchResult = () => {
 
@@ -24,15 +24,15 @@ const SearchResult = () => {
     const filteredResults: Results[] = searchResult?.results?.filter((item: Results) => item.poster_path)
 
     return (
-        <div className="searchResult">
+        <div className={styles.searchResult}>
             <h1>Total pages : {searchResult?.total_pages}</h1>
-            <div className="foundMovies">
+            <div className={styles.foundMovies}>
                 {
                     filteredResults?.map((item) => {
                         return (
-                            <div key={item.id} className="foundMovieCard">
-                                <Link className="foundMovieCardLink" to={`${item.id}`}><img className="popularMoviePoster" src={POSTER_URL + item?.poster_path} alt="Movie Poster"/></Link>
-                                <Link className="foundMovieCardLink" to={`${item.id}`}><h3>{item?.title}</h3></Link>
+                            <div key={item.id} className={styles.foundMovieCard}>
+                                <Link className={styles.foundMovieCardLink} to={`${item.id}`}><img src={POSTER_URL + item?.poster_path} alt="Movie Poster"/></Link>
+                                <Link className={styles.foundMovieCardLink} to={`${item.id}`}><h3>{item?.title}</h3></Link>
                             </div>
                         )
                     })

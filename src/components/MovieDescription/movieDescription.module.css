@@ -13,7 +13,7 @@
     justify-content: space-between;
     margin-top: 4%;
     padding: 1% 2% 0 4%;
-    border: 5px solid #02024b;
+    border: 3px solid rgb(12, 77, 79);
     border-radius: 20px;
     box-shadow: 0 0 20px 10px;
 }
@@ -118,8 +118,14 @@
     }
 }
 @media (max-width: 500px){
+    .movieDescriptionContainer{
+        padding-top: 16%;
+    }
     .movieDescriptionPoster > img{
         width: 215px;
         height: 340px;
+    }
+    .movieInfo > h4 > a{
+        font-size: 12px;
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pagination} from "@mui/material";
 
-import "./paginator.css";
+import styles from "./paginator.module.css";
 
 interface PropTypes {
     count: number;
@@ -15,7 +15,7 @@ const Paginator = ({count, setPage}:PropTypes) => {
     }
 
     return (
-        <div className="pagination">
+        <div className={styles.pagination}>
             <Pagination count={count} color="primary" size="large" onChange={handleChange}/>
         </div>
     );

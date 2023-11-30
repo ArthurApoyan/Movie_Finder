@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 85%;
-    height: 500px;
-    margin-bottom: 5%;
-    padding: 0 2% 10% 2%;
     border: 3px solid rgb(12, 77, 79);
     border-radius: 20px;
     box-shadow: 0 0 20px 10px;
@@ -17,6 +14,11 @@
     align-items: center;
     width: 100%;
 }
+.homePageSectionMovies{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 .homePageSectionTitle{
     margin-bottom: 2%;
 }
@@ -27,8 +29,11 @@
     color: white;
 }
 .homePageSectionTitleLink{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
     text-decoration: none;
-    width: 10%;
     color: white;
 }
 .homePageSectionTitleLink:hover{
@@ -40,6 +45,7 @@
     font-size: 80px;
     border: none;
     text-shadow: 4px 1px #121111;
+    margin-top: -7%;
 }
 .homePageSectionContent > button:hover{
     cursor: pointer;
@@ -48,4 +54,22 @@
 .homePageSectionContent > button:disabled{
     cursor: not-allowed;
     color: #807e7e;
+}
+
+@media screen and (max-width: 650px){
+    .homePageSectionMovies{
+        justify-content: center;
+    }
+    .homePageSectionTitle{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .homePageSectionTitle > h2{
+        padding: 0;
+    }
+    .homePageSectionTitleLink{
+        padding: 0;
+        width: 50%;
+        justify-content: center;
+    }
 }

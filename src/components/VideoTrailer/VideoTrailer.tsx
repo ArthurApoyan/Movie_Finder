@@ -13,7 +13,7 @@ const VideoTrailer = () => {
     const {movieTitle} = useParams()
 
     useEffect(() => {
-        YTSearch({key: YTAPIkey, term: movieTitle + "Official Trailer"}, (videos:Videos[]) => {
+        YTSearch({key: YTAPIkey, term: movieTitle + "Official Trailer"}, (videos: Videos[]) => {
             setVideos(videos)
         })
     }, [])
@@ -22,10 +22,10 @@ const VideoTrailer = () => {
 
     return (
         videos && <div className="playerContainer">
-                      <div className="playerDiv">
-                        <YouTube iframeClassName="player" videoId={videos[0].id.videoId}/>
-                      </div>
-                  </div>
+            <div className="playerDiv">
+                <YouTube iframeClassName="player" videoId={videos[0].id.videoId}/>
+            </div>
+        </div>
     );
 };
 

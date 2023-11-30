@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
 import {selectTrendingMovies} from "../../store/slices/getTrendingMovies/getTrendingMoviesSlice";
 import {fetchTrendingMovies} from "../../store/slices/getTrendingMovies/getTrendingMoviesApi";
 
@@ -7,8 +7,8 @@ import MoviesOnPage from "../../components/MoviesOnPage/MoviesOnPage";
 import Paginator from "../../components/Paginator/Paginator";
 import Loading from "../../components/Loading/Loading";
 
-import "./trendingMovies.css";
-import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
+import styles from "./trendingMovies.module.css";
+import allMoviesStyles from "../../components/MoviesOnPage/moviesOnPage.module.css";
 
 const TrendingMovies = () => {
 
@@ -22,10 +22,10 @@ const TrendingMovies = () => {
     }, [page])
 
     return (
-        <div className="trendingMoviesPage">
+        <div className={styles.trendingMoviesPage}>
             {isLoading && <Loading/>}
 
-            <MoviesOnPage className="allMoviesOnOtherPages" allMovies={trending}/>
+            <MoviesOnPage className={allMoviesStyles.allMoviesOnOtherPages} allMovies={trending}/>
 
             <Paginator count={10} setPage={setPage}/>
         </div>

@@ -1,0 +1,40 @@
+.logoLink{
+    width: 8%;
+    height: 60px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px){
+    .logoLink{
+        width: 12%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .logoLink{
+        width: 16%;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .logoLink{
+        width: 6%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .logoLink{
+        width: 22%;
+    }
+}

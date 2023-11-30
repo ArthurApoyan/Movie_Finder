@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Logo from "../Logo/Logo";
 import NavMenu from "../NavMenu/NavMenu";
 import GoBackButton from "../GoBackButton/GoBackButton";
@@ -13,6 +13,10 @@ const Header = () => {
 
     const screenSize:{width:number, height:number} = useScreenSize();
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        (screenSize.width > 960) && setIsMenuOpen(false)
+    }, [screenSize]);
 
     const handleButtonClick = ():void => {
         setIsMenuOpen(!isMenuOpen)
